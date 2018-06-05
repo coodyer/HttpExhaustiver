@@ -266,11 +266,8 @@ namespace HttpExhaustiver
             general.Port = Convert.ToInt32(ConfigPortTextBox.Text);
             general.TimeOut = Convert.ToInt32(ConfigTimeOutCombox.Text.Replace("秒", "")) * 1000;
             general.Encode = ConfigEncodeComboBox.Text;
-            String body = ConfigBodyTextBox.Text;
-            body = body.Replace("\r\n", "\n");
-            body = body.Replace("\n", "\r\n");
-            general.Data = Encoding.GetEncoding(ConfigEncodeComboBox.Text.Equals("自动") ? "UTF-8" : ConfigEncodeComboBox.Text).GetBytes(body);
-            general.Body = body;
+            general.Data = Encoding.GetEncoding(ConfigEncodeComboBox.Text.Equals("自动") ? "UTF-8" : ConfigEncodeComboBox.Text).GetBytes(ConfigBodyTextBox.Text);
+            general.Body = ConfigBodyTextBox.Text;
             general.ThreadNum = Convert.ToInt32(ConfigThreadNumComboBox.Text);
             config.General = general;
             ExhaustiverVerification verification = new ExhaustiverVerification();
@@ -596,7 +593,6 @@ namespace HttpExhaustiver
             }
             dicHandle = new DicManageHandle(dics);
             DicStripStatusLabel.Text = "总数：" + Convert.ToString(dicHandle.totalNums);
-            //DicStripStatusLabel.Text = "总数：" + 1000000;
             return true;
         }
         public static List<String> matchExport(String context, Regex reg)

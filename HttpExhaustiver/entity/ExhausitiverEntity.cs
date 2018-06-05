@@ -168,6 +168,7 @@ namespace HttpExhaustiver.entity
             else {
                 context = context.Trim() + "\n\n";
             }
+            context = context.Replace("\n", "\r\n");
             entity.body = context;
             entity.data = Encoding.GetEncoding(entity.encode).GetBytes(entity.body);
             return entity;
