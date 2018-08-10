@@ -1,6 +1,8 @@
 视频教程演示：
-链接: https://pan.baidu.com/s/1vkw8YgfFrX7MZcn8GG1KxA 密码: qgjv
 
+穷举漏洞对某java论坛进行盗号： 链接: https://pan.baidu.com/s/1cZyc35_OLe7bopCTF9M2wQ 密码: ekbj
+
+穷举漏洞拿下“人人开源”站长账号：链接: https://pan.baidu.com/s/1R6qTfvT9LDRB7t080VIO1g 密码: 2j5d
 
 运行截图
 
